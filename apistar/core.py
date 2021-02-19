@@ -111,12 +111,12 @@ def docs(
     if static_url is None:
 
         def static_url_func(path):
-            return "/" + path.lstrip("/")
+            return path.lstrip("/")
 
     elif isinstance(static_url, str):
 
         def static_url_func(path):
-            return static_url.rstrip("/") + "/" + path.lstrip("/")
+            return static_url.rstrip("/") + path.lstrip("/")
 
     else:
         static_url_func = static_url
