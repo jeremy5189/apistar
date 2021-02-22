@@ -191,7 +191,7 @@ def docs(path, format, encoding, output_dir, theme, serve, verbose):
         theme = "apistar"
 
     schema_filename = os.path.basename(path)
-    schema_url = "/" + schema_filename
+    schema_url = schema_filename
     with open(path, "rb") as schema_file:
         content = schema_file.read()
 
